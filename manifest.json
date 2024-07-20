@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Gradescope++",
+    "version": "1.0",
+    "description": "Improvements On GradeScope",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["https://www.gradescope.com/*/grade"],
+        "js": ["proprogateComments.js", "rearrangeGrading.js"]
+      }
+    ]
+  }
+  
