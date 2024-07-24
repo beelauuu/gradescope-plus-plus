@@ -8,12 +8,17 @@ function hasAncestorWithClass(element, className) {
     return false;
 }
 
+// This took a week to figure out
+function triggerResize() {
+    window.dispatchEvent(new Event('resize'));
+}
+
 function rearrangeUI() {
     const container = document.querySelector('.tiiBtnContainer');
     if (container && !hasAncestorWithClass(container, 'submissionGraderRegradeRequest--content')) {
         const button = document.createElement('button');
         button.type = 'button';
-        button.className = 'tiiBtn tiiBtn-secondary u-pointerEventsAuto pageViewerControls--fadingBtn ';
+        button.className = 'tiiBtn tiiBtn-secondary u-pointerEventsAuto pageViewerControls--fadingBtn js-interactiveElement';
         button.setAttribute('aria-hidden', 'false');
         button.style.cursor = 'pointer';
         button.style.backgroundColor = 'rgb(28, 161, 160)';
@@ -21,6 +26,7 @@ function rearrangeUI() {
         button.style.border = 'none';
         button.style.borderRadius = '5px';
         button.textContent = 'Turn on Grading Mode';
+
         
         button.addEventListener('click', function() {
             if (button.textContent === 'Turn on Grading Mode') {
@@ -85,7 +91,8 @@ function rearrangeUI() {
                 if (actionBar) {
                     actionBar.style.removeProperty('display');
                 }
-            }    
+            }
+            setTimeout(triggerResize, 500);    
         });
         container.insertBefore(button, container.firstChild);
     }
