@@ -3,11 +3,10 @@
     "name": "Gradescope++",
     "version": "1.0",
     "description": "Improvements On GradeScope",
-    "permissions": ["activeTab"],
     "content_scripts": [
       {
-        "matches": ["https://www.gradescope.com/*/grade"],
-        "js": ["proprogateComments.js", "rearrangeGrading.js"]
+        "matches": ["https://www.gradescope.com/*/grade*"],
+        "js": ["grading.js"]
       }
     ]
   }
