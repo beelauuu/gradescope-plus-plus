@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h3>Grading Mode Settings</h3>
+    <div class="option">
+        <input type="checkbox" id="toggleTopDetails" checked>
+        <label for="toggleTopDetails">Toggle Top Details</label>
+    </div>
+    <div class="option">
+        <input type="checkbox" id="toggleAdjustments" checked>
+        <label for="toggleAdjustments">Toggle Rubric Adjustments</label>
+    </div>
+    <div class="option">
+        <input type="checkbox" id="toggleSidebar" checked>
+        <label for="toggleSidebar">Toggle Gradescope Sidebar</label>
+    </div>
+    <div class="option">
+        <input type="checkbox" id="toggleActionBar" checked>
+        <label for="toggleActionBar">Toggle Action Bar</label>
+    </div>
+    <div class="option">
+        <input type="checkbox" id="toggleCommentsSection" checked>
+        <label for="toggleCommentsSection">Toggle Comments Section</label>
+    </div>
+    <div class="option">
+        <input type="checkbox" id="toggleGradingButtons" checked>
+        <label for="toggleGradingButtons">Toggle Grading Buttons</label>
+    </div>
+    <button id="saveSettings">Save Settings</button>
+    <p id="refreshMessage" style="display: none;">Please refresh the page for changes to take effect.</p>
+    <script src="../js/popup.js"></script>
+</body>
+</html>

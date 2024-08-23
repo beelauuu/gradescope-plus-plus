@@ -3,10 +3,14 @@
     "name": "Gradescope++",
     "version": "1.0",
     "description": "Improvements On GradeScope",
+    "permissions": ["storage"],
+    "action": {
+        "default_popup": "html/popup.html"
+    },
     "content_scripts": [
       {
         "matches": ["https://www.gradescope.com/*/grade*"],
-        "js": ["grading.js"]
+        "js": ["js/grading.js"]
       }
     ]
   }
