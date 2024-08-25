@@ -1,11 +1,21 @@
 {
     "manifest_version": 3,
     "name": "Gradescope++",
-    "version": "1.0",
+    "version": "1.2",
     "description": "Improvements On GradeScope",
     "permissions": ["storage"],
     "action": {
+        "default_icon": {
+          "16": "logos/logo16.png",
+          "48": "logos/logo48.png",
+          "128": "logos/logo128.png"
+        },
         "default_popup": "html/popup.html"
+    },
+    "icons": {
+      "16": "logos/logo16.png",
+      "48": "logos/logo48.png",
+      "128": "logos/logo128.png"  
     },
     "content_scripts": [
       {
